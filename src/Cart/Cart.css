@@ -1,0 +1,20 @@
+.select-product-design{
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid gray;
+    margin-bottom: 3px;
+   
+}
+.heading h3{
+ margin:0;
+}
+.heading h5{
+ margin:0;
+ 
+}
+.bueOneBtn{
+    background-color:orange;
+    width: 100%;
+    padding: 10px;
+    border: 0;
+}

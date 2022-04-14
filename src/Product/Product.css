@@ -1,0 +1,24 @@
+.product{
+    border: 2px solid rgb(112, 110, 110);
+    border-radius: 5px;
+}
+.product img{
+    width: 250px;
+    height: 160px;
+    padding: 5px;
+}
+.product-details{
+    padding-left: 30px;
+}
+.product-details p{
+    font-size: 20px;
+    color: orange;
+}
+.btn{
+    color: rgb(233, 229, 227);
+    background-color: rgb(223, 62, 8);
+    border: none;
+    width: 100%;
+    padding: 20px;
+    font-size: 20px;
+}
