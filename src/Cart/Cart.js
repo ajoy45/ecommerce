@@ -15,7 +15,7 @@ const Cart = ({cart,products}) => {
         }
     },[cart.length])
     return (
-        <div
+        <div 
          onMouseEnter={()=>setChangeImg(true)}
          onMouseLeave={()=>setChangeImg(false)}
         >
@@ -25,7 +25,8 @@ const Cart = ({cart,products}) => {
                  <img width={50} height={50} src={changeImg?product.sideImage:product.pairImage} alt=''/>
                  <div className='heading'>
                  <h3>{product.name}</h3>
-                 <h5>{product.color}</h5>
+                 <h5>${product.price}</h5>
+                 <h5>{product.quantity}</h5>
                  </div>
                  
                  

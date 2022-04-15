@@ -1,6 +1,8 @@
+
 .product{
     border: 2px solid rgb(112, 110, 110);
     border-radius: 5px;
+    
 }
 .product img{
     width: 250px;

@@ -1,8 +1,11 @@
+
+
 .select-product-design{
     display: flex;
     justify-content: space-around;
     border: 2px solid gray;
     margin-bottom: 3px;
+   
    
 }
 .heading h3{
