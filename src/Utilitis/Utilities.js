@@ -6,13 +6,21 @@ const addToLocalStorage=(id)=>{
     const exist=getFromLocalStorage();
     // console.log(exist);
     let shoppingCart={};
-    if(exist){
+    if(!exist){
         shoppingCart[id]=1;
     } else{
-        console.log("nothing")
+        shoppingCart=exist;
+        if(shoppingCart[id]){
+            const newCount=shoppingCart[id]+1;
+            shoppingCart[id]=newCount;
+
+        }
+        else{
+            shoppingCart[id]=1;
+        }
     }
     
     
     localStorage.setItem("Shopping_Cart",JSON.stringify(shoppingCart))
 }
-export{addToLocalStorage}
+export{addToLocalStorage,getFromLocalStorage}

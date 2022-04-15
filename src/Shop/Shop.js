@@ -5,6 +5,7 @@ import { addToLocalStorage, getFromLocalStorage,clearLocalStorage } from '../Uti
 import './Shop.css'
 const Shop = () => {
     const [products,setProducts]=useState([]);
+    // console.log(products)
     const[cart,setCart]=useState([]);
     
     // console.log(cart);
@@ -15,7 +16,25 @@ const Shop = () => {
         .then(data=>setProducts(data))
     },[])
     
-    
+    // for localstorage
+    useEffect(()=>{
+      if(products.length){
+        const storedProductIds=getFromLocalStorage();
+      
+      const previousCart=[];
+      for(const id in storedProductIds){
+        // console.log(id);
+        const foundProduct=products.find(product=>product.id===id);
+         
+        if(foundProduct){
+          const quantity=storedProductIds[id];
+          foundProduct.quantity=quantity;
+          previousCart.push(foundProduct)
+        }
+        setCart(previousCart)
+      }
+    }
+    },[products])
     // selected product
     const AddToCart=(selectProduct)=>{
 
@@ -46,7 +65,7 @@ const Shop = () => {
         //   newCart = [...rest, selectProduct];
         // }
     
-        // addToLocalStorage(selectProduct.id);
+         addToLocalStorage(selectProduct.id);
         setCart(newCart);
       }
 
